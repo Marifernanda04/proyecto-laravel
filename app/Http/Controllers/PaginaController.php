@@ -15,10 +15,20 @@ class PaginaController extends Controller
             $nombre='';
             $correo='';
         }
-        return view('contacto',compact('nombre','correo'));
+        return view('/contacto',compact('nombre','correo'));
     }
 
     public function landingpage(){
-        return view('landingpage');
+        return view('/landingpage');
+    }
+
+    public function guardar(Request $request){
+        dd($request-> all());
+
+        $request->validate([
+            'nombre' => 'required [max:255|min:5]',
+            'correo' => ['required', 'email'],
+            'comentario' => 'required',
+        ]);
     }
 }
