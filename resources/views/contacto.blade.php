@@ -11,7 +11,7 @@
 
 <body>
     <h1>Contacto</h1><br>
-    <form action="/contacto" method="POST">
+    <form action="/contacto" method="post">
         @csrf
         <label for="nombre">Introduce tu Nombre</label><br>
         <input type="text" name="nombre" placeholder="hola" value="{{old('nombre') ?? $nombre}}"><br>

@@ -21,3 +21,4 @@ Route::get('/', function () {
 Route::get('/landingpage', [PaginaController::class,'landingpage']);
 
 Route::get('/contacto/{codigo?}', [PaginaController::class,'contacto']);
+route::post('/contacto',[PaginaController::class,'guarda']);
